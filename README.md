@@ -1,1 +1,1 @@
-# cypress-code-coverage ![check-code-coverage](https://img.shields.io/badge/code--coverage-84.67%25-green)
+# cypress-code-coverage ![check-code-coverage](https://img.shields.io/badge/code--coverage-72.99%25-yellow)
