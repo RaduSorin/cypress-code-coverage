@@ -90,7 +90,7 @@ describe('TodoMVC - React', function () {
   })
 
   context('No Todos', function () {
-    it.skip('should hide #main and #footer', function () {
+    it('should hide #main and #footer', function () {
       // Unlike the TodoMVC tests, we don't need to create
       // a gazillion helper functions which are difficult to
       // parse through. Instead we'll opt to use real selectors
@@ -111,7 +111,7 @@ describe('TodoMVC - React', function () {
     // https://on.cypress.io/should
     // https://on.cypress.io/as
 
-    it.skip('should allow me to add todo items', function () {
+    it('should allow me to add todo items', function () {
       // create 1st todo
       cy.get('.new-todo')
         .type(TODO_ITEM_ONE)
@@ -135,7 +135,7 @@ describe('TodoMVC - React', function () {
         .should('contain', TODO_ITEM_TWO)
     })
 
-    it.skip('adds items', function () {
+    it('adds items', function () {
       // create several todos then check the number of items in the list
       cy.get('.new-todo')
         .type('todo A{enter}')
@@ -152,7 +152,7 @@ describe('TodoMVC - React', function () {
       cy.get('.new-todo').should('have.text', '')
     })
 
-    it.skip('should append new items to the bottom of the list', function () {
+    it('should append new items to the bottom of the list', function () {
       // this is an example of a custom command
       // defined in cypress/support/commands.js
       cy.createDefaultTodos().as('todos')
@@ -176,7 +176,7 @@ describe('TodoMVC - React', function () {
         .should('contain', TODO_ITEM_THREE)
     })
 
-    it.skip('should trim text input', function () {
+    it('should trim text input', function () {
       // this is an example of another custom command
       // since we repeat the todo creation over and over
       // again. It's up to you to decide when to abstract
@@ -192,13 +192,13 @@ describe('TodoMVC - React', function () {
         .should('have.text', TODO_ITEM_ONE)
     })
 
-    it.skip('should show #main and #footer when items added', function () {
+    it('should show #main and #footer when items added', function () {
       cy.createTodo(TODO_ITEM_ONE)
       cy.get('.main').should('be.visible')
       cy.get('.footer').should('be.visible')
     })
 
-    it.skip('does nothing without entered text', () => {
+    it('does nothing without entered text', () => {
       cy.get('.new-todo').type('{enter}')
     })
   })
@@ -207,7 +207,7 @@ describe('TodoMVC - React', function () {
     // New commands used here:
     // - cy.clear    https://on.cypress.io/api/clear
 
-    it.skip('should allow me to mark items as complete', function () {
+    it('should allow me to mark items as complete', function () {
       // we are aliasing the return value of
       // our custom command 'createTodo'
       //
@@ -229,7 +229,7 @@ describe('TodoMVC - React', function () {
       cy.get('@secondTodo').should('have.class', 'completed')
     })
 
-    it.skip('should allow me to un-mark items as complete', function () {
+    it('should allow me to un-mark items as complete', function () {
       cy.createTodo(TODO_ITEM_ONE).as('firstTodo')
       cy.createTodo(TODO_ITEM_TWO).as('secondTodo')
 
@@ -246,7 +246,7 @@ describe('TodoMVC - React', function () {
       cy.get('@secondTodo').should('not.have.class', 'completed')
     })
 
-    it.skip('should allow me to edit an item', function () {
+    it('should allow me to edit an item', function () {
       cy.createDefaultTodos().as('todos')
 
       cy.get('@todos')
@@ -275,7 +275,7 @@ describe('TodoMVC - React', function () {
         .should('contain', TODO_ITEM_THREE)
     })
 
-    it.skip('should delete item', () => {
+    it('should delete item', () => {
       cy.createDefaultTodos().as('todos')
       // the destroy element only becomes visible on hover
       cy.get('@todos')
@@ -293,7 +293,7 @@ describe('TodoMVC - React', function () {
   })
 
   context('Counter', function () {
-    it.skip('should display the current number of todo items', function () {
+    it('should display the current number of todo items', function () {
       cy.createTodo(TODO_ITEM_ONE)
       cy.get('.todo-count').contains('1 item left')
       cy.createTodo(TODO_ITEM_TWO)
