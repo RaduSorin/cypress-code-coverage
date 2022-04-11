@@ -24,6 +24,6 @@ jobs:
       - name: Update code coverage badge
         run:  npx update-badge
         
-      - uses: mikeal/publish-to-github-action@master
+      - uses: mikeal/publish-to-github-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
