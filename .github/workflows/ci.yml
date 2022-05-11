@@ -24,13 +24,9 @@ jobs:
       - name: Copy coverage report
         run: |
           mkdir public
-<<<<<<< HEAD
 
       - name: Generate coverage report
         run: npm run report:coverage
-=======
-          cp coverage/ public/
->>>>>>> 6c32ab37ac7ef49c9d78e3965f1f595649bb6dd9
         
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
