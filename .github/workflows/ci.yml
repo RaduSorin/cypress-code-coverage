@@ -23,7 +23,6 @@ jobs:
       
       - name: Copy coverage report
         run: |
-          mkdir public
           cp -r cypress/coverage/lcov-report public/
         
       - name: Deploy report page
