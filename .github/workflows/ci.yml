@@ -27,7 +27,7 @@ jobs:
       - name: Copy coverage report
         run: |
           mkdir public
-          cp -a coverage/ public/
+          cp coverage/ public/
         
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
