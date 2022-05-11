@@ -20,10 +20,13 @@ jobs:
         with:
           start: npm start
           wait-on: 'http://localhost:1234'
+        
+      - name: Generate coverage report
+        run: npm run report:coverage
       
       - name: Copy coverage report
         run: |
-          cp -r cypress/coverage/lcov-report public/
+          cp -r cypress/coverage/ public/coverage
         
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
