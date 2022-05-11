@@ -21,13 +21,12 @@ jobs:
           start: npm start
           wait-on: 'http://localhost:1234'
 
-      - name: Generate coverage report
-        run: npm run report:coverage
-
       - name: Copy coverage report
         run: |
           mkdir public
-          cp -a coverage/ public/
+
+      - name: Generate coverage report
+        run: npm run report:coverage
         
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
