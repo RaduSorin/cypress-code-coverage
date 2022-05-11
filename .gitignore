@@ -6,3 +6,4 @@ cypress/videos
 instrumented
 .vscode
 cypress/screenshots
+public
