@@ -14,7 +14,7 @@
     "cypress:verify": "cypress verify",
     "start": "cross-env NODE_ENV=test parcel serve --no-cache new/public/index.html",
     "dev": "cross-env NODE_ENV=test start-test 1234 cypress:open",
-    "report:coverage": "nyc report --reporter=html",
+    "report:coverage": "nyc report --reporter=html --report-dir ./public",
     "report:coverage:text": "nyc report --reporter=text",
     "report:coverage:summary": "nyc report --reporter=text-summary",
     "coveralls": "cat coverage/lcov.info | coveralls",
