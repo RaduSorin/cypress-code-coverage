@@ -20,12 +20,10 @@ jobs:
         with:
           start: npm start
           wait-on: 'http://localhost:1234'
-        
-      - name: Generate coverage report
-        run: npm run report:coverage
       
       - name: Copy coverage report
         run: |
+          mkdir public
           cp -r coverage/ public/
         
       - name: Deploy report page
