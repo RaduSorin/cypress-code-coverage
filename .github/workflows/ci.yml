@@ -24,10 +24,14 @@ jobs:
       - name: Copy coverage report
         run: |
           mkdir public
-
+          
+      # create coverage report
+      
       - name: Generate coverage report
         run: npm run report:coverage
         
+      # deploy report to github pages
+      
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
         with:
