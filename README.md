@@ -1,4 +1,4 @@
-# cypress-code-coverage ![check-code-coverage](https://img.shields.io/badge/code--coverage-99.27%25-brightgreen)
+# cypress-code-coverage ![check-code-coverage](https://img.shields.io/badge/code--coverage-72.99%25-yellow)
 
 > Saves the code coverage collected during Cypress tests
 
